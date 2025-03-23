@@ -1,0 +1,242 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 120 78% 21%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 6% 10%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46.1%;
+
+    --accent: 120 70% 29%;
+    --accent-foreground: 240 6% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 120 78% 21%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 120 70% 40%;
+    --primary-foreground: 240 6% 10%;
+
+    --secondary: 240 4% 12%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 4% 12%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 120 70% 40%;
+    --accent-foreground: 240 6% 10%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 4% 16%;
+    --input: 240 4% 16%;
+    --ring: 120 70% 40%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+.timeline-dot {
+  @apply absolute left-0 h-4 w-4 rounded-full bg-brand border-4 border-white transform -translate-x-1/2;
+}
+
+.timeline-line {
+  @apply absolute top-0 left-0 h-full w-px bg-gray-200 transform -translate-x-1/2;
+  z-index: -1;
+}
+
+.timeline-card {
+  @apply opacity-0;
+}
+
+.timeline-card.animate-fade-in {
+  @apply opacity-100;
+}
+
+.skill-item {
+  @apply transition-all duration-300 ease-in-out hover:scale-105;
+}
+
+.logo-initials {
+  @apply relative flex items-center justify-center h-24 w-24 rounded-full border-3 border-brand;
+}
+
+.logo-initials::before {
+  content: "";
+  @apply absolute h-full w-px bg-brand;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.section {
+  @apply opacity-0;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.section-delay-1 {
+  animation-delay: 0.1s;
+}
+
+.section-delay-2 {
+  animation-delay: 0.2s;
+}
+
+.section-delay-3 {
+  animation-delay: 0.3s;
+}
+
+.section-delay-4 {
+  animation-delay: 0.4s;
+}
+
+.section-delay-5 {
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.blur-load {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.blur-load::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: pulse 2.5s infinite;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.appear-from-bottom {
+  animation: appear-from-bottom 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  opacity: 0;
+}
+
+@keyframes appear-from-bottom {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #0E5B2D;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-item:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.nav-item.active::after {
+  transform: scaleX(1);
+}
