@@ -41,7 +41,7 @@ const ExperienceSection = () => {
       title: "Full Stack Developer",
       company: "Insight Software",
       location: "Hyderabad, India (Remote)",
-      period: "12/2023 to CURRENT",
+      period: "27/12/2023 to 19/03/2025",
       description: [
         "Comprehend the entire project line by line through debugging, even in the absence of documentation.",
         "Setup new project acquired project",
@@ -56,7 +56,7 @@ const ExperienceSection = () => {
       title: "Sr. Software Engineer",
       company: "Wipro - Blackstone",
       location: "Gurugram, Haryana",
-      period: "11/2020 to 12/2023",
+      period: "23/11/2020 to 03/10/2023",
       description: [
         "Company Overview: Wipro Limited is a leading global information technology, consulting and business process services company",
         "Wipro harnesses the power of cognitive computing, hyper-automation, robotics, cloud, analytics and emerging technologies to help our clients adapt to the digital world and make them successful",
@@ -66,7 +66,7 @@ const ExperienceSection = () => {
       title: "Sr. Software Engineer",
       company: "FIS",
       location: "Mohali",
-      period: "04/2018 to 11/2020",
+      period: "09/04/2018 to 16/11/2020",
       description: [
         "Company Overview: FIS(Fidelity Information Services) is the world's largest global provider dedicated to financial technology solutions",
         "FIS empowers the financial world with software, services, consulting and outsourcing solutions focused on retail and institutional banking, payments, asset and wealth management, risk and compliance, trade enablement, transaction processing and record-keeping",
@@ -76,7 +76,7 @@ const ExperienceSection = () => {
       title: "Sr. Software Engineer",
       company: "JnG IT Solutions",
       location: "Mohali",
-      period: "07/2015 to 04/2018",
+      period: "01/07/2015 to 08/04/2018",
       description: [
         "Company Overview: It's a software development company which provides custom services to clients and mainly focuses on the development of parcel delivery services",
       ]
